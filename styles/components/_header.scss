@@ -1,0 +1,32 @@
+.header-main {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1.5vh 4vw;
+  background-color: black;
+  color: white;
+  .header-icon-container {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    .header-icon-link {
+      display: flex;
+      .header-icon {
+        display: flex;
+        align-self: center;
+        font-size: 1.25rem;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  .header-link-container {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

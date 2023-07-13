@@ -1,0 +1,29 @@
+.landing-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2a4365;
+  & > .img-container {
+    margin-top: 30vh;
+    height: 120px;
+    aspect-ratio: 1;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .landing-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-top: 1vh;
+    padding-bottom: 10vh;
+    color: white;
+  }
+  .landing-intro {
+    font-size: 3rem;
+    color: white;
+    width: 40%;
+    text-align: center;
+    padding-bottom: 30vh;
+  }
+}
