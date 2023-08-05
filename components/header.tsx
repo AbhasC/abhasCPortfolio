@@ -1,41 +1,25 @@
 import Link from "next/link";
-import { IconType } from "react-icons";
-import {
-  BsMedium,
-  BsGithub,
-  BsLinkedin,
-  BsStackOverflow,
-} from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
 
 export default function Header() {
-  const headerIcons = [
-    MdEmail,
-    BsGithub,
-    BsLinkedin,
-    BsStackOverflow,
-    BsMedium,
-  ];
+  const headerLinks = ["home", "about me", "abilities", "work", "contact"];
 
-  const mapper = (Val: IconType, ind: number) => {
+  const mapper = (val: string, ind: number) => {
     return (
-      <Link href="/" className="header-icon-link">
-        <Val key={ind} className="header-icon" />
+      <Link href="/" key={ind} className="header-link">
+        <span className="header-link-span-1">0{ind}</span>
+        <span className="header-link-span-2">{`// ${val}`}</span>
       </Link>
     );
   };
 
   return (
     <header className="header-main">
-      <div className="header-icon-container">{headerIcons.map(mapper)}</div>
-      <div className="header-link-container">
-        <Link href="/#projects" className="to-projects">
-          Projects
-        </Link>
-        <Link href="/#contactMe" className="to-contact">
-          Contact Me
-        </Link>
-      </div>
+      <Link href="/" className="header-my-name">
+        AbhasChatterjee<span>.</span>
+        <strong>_</strong>
+        <span>{`//`}</span>
+      </Link>
+      <div className="header-link-container">{headerLinks.map(mapper)}</div>
     </header>
   );
 }

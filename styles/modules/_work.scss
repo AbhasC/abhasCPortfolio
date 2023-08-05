@@ -1,0 +1,98 @@
+.work-main {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  background: linear-gradient(0.5turn, #111111, 55%, #3a3a3a);
+  * {
+    transition: all 0.3s ease;
+  }
+  .work-header {
+    max-width: 1170px;
+    width: 90%;
+    display: flex;
+    margin: 5vh auto 7.5vh auto;
+    .header-text {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      .header-text-heading {
+        font-size: 4.5rem;
+        font-weight: 500;
+        font-family: "Pacifico";
+      }
+      .header-text-subheading {
+        font-size: 1.25rem;
+        margin-top: 2vh;
+      }
+    }
+  }
+  .works-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1170px;
+    width: 90%;
+    align-self: center;
+    .works-filter {
+      display: flex;
+      width: 500px;
+      justify-content: space-between;
+      &:hover {
+        label {
+          color: gray;
+        }
+      }
+      .filter-span {
+        font-size: 1.1rem;
+        margin-right: 10px;
+      }
+      input {
+        display: none;
+        &:checked ~ label {
+          color: rgb(255, 90, 255);
+        }
+      }
+      label {
+        font-size: 0.95rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    .works-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 7.5vh 0;
+      gap: 6vh 5vh;
+      .work-container {
+        background-color: rgb(85, 85, 85);
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        border-radius: 10px;
+        & > .img-container {
+          height: 210px;
+          aspect-ratio: 1;
+          border-radius: 5px;
+          overflow: hidden;
+          pointer-events: none;
+        }
+        .work-title {
+          margin: 25px 0 5px 0;
+          font-size: 1.4rem;
+        }
+        &:hover {
+          background-color: rgb(68, 25, 107);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

@@ -1,40 +1,79 @@
 .contact-main {
-  background-color: #512da8;
+  background: linear-gradient(0.5turn, #3a3a3a, 50%, #000000);
   color: white;
   display: flex;
   flex-direction: column;
   width: 100%;
-  .contact-name {
-    font-size: 2rem;
-    margin: 8vh auto;
-    font-weight: 400;
-    padding-top: 6vh;
+  * {
+    transition: all 0.3s ease-in-out;
   }
-  .contact-form {
-    margin: 0 auto;
-    width: 50vw;
+  .contact-name {
     display: flex;
-    flex-direction: column;
-    max-width: 700px;
-    ::placeholder {
-      color: white;
+    max-width: 1170px;
+    justify-content: flex-end;
+    align-self: center;
+    margin: 8vh 0;
+    width: 90%;
+    font-size: 4.5rem;
+    font-weight: 500;
+    font-family: "Pacifico";
+  }
+  .contact-container {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    max-width: 1170px;
+    width: 90%;
+    gap: 70px;
+    .contact-text {
+      display: flex;
+      flex-direction: column;
+      width: 35%;
+      .contact-heading {
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 3vh;
+      }
+      .contact-subheading {
+        font-size: 1.1rem;
+      }
     }
-    .cm-form-ip {
-      padding: 6px 4px;
-      background-color: #512da8;
-      margin-bottom: 2vh;
-      color: white;
-    }
-    .cm-message {
-      height: 20vh;
-    }
-    .cm-form-button {
-      background-color: #805ad5;
-      border: none;
-      margin-bottom: 20vh;
-      color: white;
-      padding: 8px 0;
-      font-size: 1.2rem;
+    .contact-form {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      ::placeholder {
+        color: white;
+      }
+      .cm-form-ip {
+        padding: 12px 10px;
+        background-color: #000000;
+        margin-bottom: 2vh;
+        color: white;
+        outline: none;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        &:hover {
+          border: 2px solid gray;
+        }
+        &:focus {
+          border: 2px solid rgb(40, 214, 118);
+        }
+      }
+      .cm-message {
+        height: 20vh;
+        resize: none;
+      }
+      .cm-form-button {
+        background-color: rgb(40, 214, 118);
+        border: none;
+        margin-bottom: 20vh;
+        color: black;
+        padding: 8px 0;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        cursor: pointer;
+      }
     }
   }
 }

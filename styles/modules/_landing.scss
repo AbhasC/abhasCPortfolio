@@ -3,27 +3,96 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #2a4365;
+  position: relative;
+  overflow: hidden;
+  background-color: #000107;
   & > .img-container {
-    margin-top: 30vh;
-    height: 120px;
+    position: absolute;
+    width: 850px;
     aspect-ratio: 1;
+    top: 10vh;
+    left: auto;
+    opacity: 80%;
     img {
-      border-radius: 50%;
+      object-fit: cover;
     }
+    animation: rotate 15s linear infinite;
   }
   .landing-name {
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding-top: 1vh;
+    font-size: 6rem;
+    font-weight: 600;
+    padding-top: 42.5vh;
     padding-bottom: 10vh;
     color: white;
+    z-index: 2;
+    text-shadow: 0 0 4px black;
+    font-family: "Kaushan Script";
   }
   .landing-intro {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
     color: white;
-    width: 40%;
+    width: 60%;
     text-align: center;
-    padding-bottom: 30vh;
+    padding-bottom: 20vh;
+    z-index: 2;
+    text-shadow: 0 0 2px black;
+  }
+  .scroll-anim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    width: 50px;
+    margin-top: 15vh;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    .arrow-down {
+      font-size: 2rem;
+      color: white;
+      animation: bounce 4.5s linear infinite;
+      position: absolute;
+    }
+    .mouse-down {
+      font-size: 2rem;
+      color: white;
+      animation: bounce 4.5s linear infinite 2.25s;
+      position: absolute;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-200%);
+    color: white;
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(220%);
+  }
+  51% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(220%);
   }
 }

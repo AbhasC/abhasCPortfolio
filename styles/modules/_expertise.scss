@@ -1,0 +1,97 @@
+.expertise-main {
+  color: white;
+  width: 100%;
+  background: linear-gradient(0.5turn, #282828, 55%, #111111);
+  .expertise-name {
+    width: 100%;
+    text-align: center;
+    padding-top: 5vh;
+    font-size: 4.5rem;
+    font-weight: 500;
+    font-family: "Pacifico";
+  }
+  .expertise-container {
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+    width: fit-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .exp-container {
+      width: 390px;
+      display: flex;
+      flex-direction: column;
+      padding: 15% 10% 12% 10%;
+      margin: 3vh 0;
+      border: 2px solid white;
+      &:nth-of-type(even) {
+        border-right: none;
+        border-left: none;
+      }
+      &:nth-of-type(1) {
+        .exp-head {
+          .exp-name {
+            &::first-line {
+              background: linear-gradient(
+                transparent 65%,
+                rgb(219, 114, 131) 35%
+              );
+            }
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        .exp-head {
+          .exp-name {
+            &::first-line {
+              background: linear-gradient(
+                transparent 65%,
+                rgb(11, 179, 179) 35%
+              );
+            }
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        .exp-head {
+          .exp-name {
+            &::first-line {
+              background: linear-gradient(
+                transparent 65%,
+                rgb(214, 139, 0) 35%
+              );
+            }
+          }
+        }
+      }
+      .exp-head {
+        display: flex;
+        padding-bottom: 3vh;
+        svg {
+          font-size: 4rem;
+          width: 30%;
+        }
+        .exp-name {
+          font-size: 1.5rem;
+          padding-left: 15px;
+          width: 70%;
+          text-shadow: 0 0 4px black;
+        }
+      }
+      & > span {
+        color: rgb(94, 94, 94);
+        user-select: none;
+        padding: 4px 0;
+      }
+      .exp-decr {
+        display: flex;
+        width: 90%;
+        border-left: 2px solid rgb(84, 84, 84);
+        margin-left: 18px;
+        padding-left: 10%;
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+    }
+  }
+}

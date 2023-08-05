@@ -1,32 +1,66 @@
 .header-main {
+  position: fixed;
   display: flex;
+  height: 10vh;
   width: 100%;
   justify-content: space-between;
-  padding: 1.5vh 4vw;
-  background-color: black;
-  color: white;
-  .header-icon-container {
-    width: 180px;
+  padding: 2vh 4vw;
+  background-color: transparent;
+  z-index: 3;
+  backdrop-filter: blur(25px);
+  * {
+    transition: all 0.2s ease;
+  }
+  .header-my-name {
+    z-index: 2;
+    height: 55px;
     display: flex;
-    justify-content: space-between;
-    .header-icon-link {
-      display: flex;
-      .header-icon {
-        display: flex;
-        align-self: center;
-        font-size: 1.25rem;
-        color: white;
-        text-decoration: none;
+    align-items: flex-end;
+    font-size: 2.25rem;
+    text-decoration: none;
+    font-family: "Caveat";
+    font-weight: 600;
+    color: rgb(38, 174, 219);
+    span {
+      color: white;
+      padding-left: 4px;
+      &:nth-last-child(1) {
+        color: rgb(40, 214, 118);
       }
+    }
+    strong {
+      color: purple;
+      padding-left: 4px;
+    }
+    &:hover {
+      opacity: 0.75;
     }
   }
   .header-link-container {
+    z-index: 2;
     display: flex;
-    width: 160px;
-    justify-content: space-between;
-    a {
+    &:hover {
+      & > a {
+        color: gray;
+      }
+    }
+    .header-link {
+      display: flex;
+      flex-direction: column;
+      padding-left: 2vw;
+      align-items: flex-end;
       text-decoration: none;
+      justify-content: flex-start;
       color: white;
+      .header-link-span-1 {
+        font-size: 0.75rem;
+      }
+      .header-link-span-2 {
+        font-size: 1.25rem;
+      }
+      &:hover {
+        color: white;
+      }
     }
   }
 }
