@@ -16,6 +16,8 @@
     "camelcase": "error",
     "react/jsx-indent-props": ["warn", 2],
     "import/no-unresolved": "error",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
     "import/order": [
       "warn",
       {
