@@ -1,9 +1,6 @@
 .footer-main {
   display: flex;
   background-color: black;
-  * {
-    transition: all 0.3s ease;
-  }
   .link-section-left {
     height: 150px;
     position: fixed;
@@ -18,14 +15,17 @@
       padding-left: 50px;
       a {
         text-decoration: none;
-        color: gray;
         font-size: 2rem;
         height: 60px;
         display: flex;
         align-items: center;
-        &:hover {
-          color: white;
-          filter: drop-shadow(0 0 10px white);
+        svg {
+          color: grey;
+          transition: all 0.3s linear;
+          &:hover {
+            color: white;
+            filter: drop-shadow(0 0 10px white);
+          }
         }
       }
       &:nth-child(1):before {
@@ -62,14 +62,17 @@
       padding-right: 50px;
       a {
         text-decoration: none;
-        color: gray;
         font-size: 2rem;
         height: 60px;
         display: flex;
         align-items: center;
-        &:hover {
-          color: white;
-          filter: drop-shadow(0 0 10px white);
+        svg {
+          color: grey;
+          transition: all 0.3s linear;
+          &:hover {
+            color: white;
+            filter: drop-shadow(0 0 10px white);
+          }
         }
       }
       &:nth-child(1):before {

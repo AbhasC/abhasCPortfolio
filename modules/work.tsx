@@ -1,6 +1,15 @@
+import { useRef } from "react";
 import Image from "next/image";
 
 export default function Work() {
+  const allRef = useRef<HTMLInputElement>(null);
+  const webdevRef = useRef<HTMLInputElement>(null);
+  const aimlRef = useRef<HTMLInputElement>(null);
+  const autoRef = useRef<HTMLInputElement>(null);
+  const dataRef = useRef<HTMLInputElement>(null);
+
+  const refData = [allRef, webdevRef, aimlRef, autoRef, dataRef];
+
   const workLinks = [
     {
       link: "https://ashucrafts.vercel.app/",
@@ -100,6 +109,15 @@ export default function Work() {
     },
   ];
 
+  let renderLinks: {
+    link: string;
+    src: string;
+    title: string;
+    decr: string;
+    type: string;
+    status: string;
+  }[] = [];
+
   const mapper = (
     elem: {
       link: string;
@@ -128,6 +146,22 @@ export default function Work() {
     );
   };
 
+  const changeHandler = () => {
+    renderLinks = [];
+    let btnValue = "";
+    refData.forEach((elem) => {
+      if (elem?.current?.checked) {
+        btnValue = elem?.current?.value;
+      }
+    });
+    console.log(btnValue);
+    workLinks.forEach((elem) => {
+      if (elem.type === btnValue) {
+        renderLinks.push(elem);
+      }
+    });
+  };
+
   return (
     <section className="work-main">
       <div className="work-header">
@@ -151,31 +185,66 @@ export default function Work() {
               id="all"
               name="but"
               defaultChecked
+              value="all"
+              ref={allRef}
+              onChange={changeHandler}
             />
             <label htmlFor="all">All</label>
           </div>
           <span>|</span>
           <div>
-            <input type="radio" className="selbut" id="webdev" name="but" />
+            <input
+              type="radio"
+              className="webbut"
+              id="webdev"
+              name="but"
+              value="webdev"
+              ref={webdevRef}
+              onChange={changeHandler}
+            />
             <label htmlFor="webdev">Web Dev</label>
           </div>
           <span>|</span>
           <div>
-            <input type="radio" className="selbut" id="aiml" name="but" />
+            <input
+              type="radio"
+              className="aimlbut"
+              id="aiml"
+              name="but"
+              value="aiml"
+              ref={aimlRef}
+              onChange={changeHandler}
+            />
             <label htmlFor="aiml">AIML</label>
           </div>
           <span>|</span>
           <div>
-            <input type="radio" className="selbut" id="autom" name="but" />
+            <input
+              type="radio"
+              className="autobut"
+              id="autom"
+              name="but"
+              value="auto"
+              ref={autoRef}
+              onChange={changeHandler}
+            />
             <label htmlFor="autom">Automation</label>
           </div>
           <span>|</span>
           <div>
-            <input type="radio" className="selbut" id="datasc" name="but" />
+            <input
+              type="radio"
+              className="dascbut"
+              id="datasc"
+              name="but"
+              value="data"
+              ref={dataRef}
+              onChange={changeHandler}
+            />
             <label htmlFor="datasc">Data Science</label>
           </div>
         </div>
-        <div className="works-container">{workLinks.map(mapper)}</div>
+        <div className="works-container">{renderLinks.map(mapper)}</div>
       </div>
     </section>
   );

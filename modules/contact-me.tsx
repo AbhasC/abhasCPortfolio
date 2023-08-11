@@ -7,8 +7,8 @@ export default function ContactMe() {
           <h3 className="contact-heading">Get in touch</h3>
           <p className="contact-subheading">
             Please feel free to contact me if any freelance opportunity arises.
-            I&apos;ll do my best to get back to you, whether you have a question
-            or just want to say hi.
+            I&apos;ll do my best to get back to you, whether if you have a
+            question or just want to say hi.
           </p>
         </div>
         <form className="contact-form">
@@ -28,6 +28,7 @@ export default function ContactMe() {
             placeholder="Your inquiry"
           ></input>
           <textarea
+            rows={30}
             cols={10}
             className="cm-form-ip cm-message"
             placeholder="Your message"
