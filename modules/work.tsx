@@ -145,27 +145,33 @@ export default function Work() {
         <div className="works-filter">
           <span className="filter-span">Filter By</span>
           <div>
-            <input type="radio" className="selbut" id="all" />
+            <input
+              type="radio"
+              className="selbut"
+              id="all"
+              name="but"
+              defaultChecked
+            />
             <label htmlFor="all">All</label>
           </div>
           <span>|</span>
           <div>
-            <input type="radio" className="selbut" id="webdev" />
+            <input type="radio" className="selbut" id="webdev" name="but" />
             <label htmlFor="webdev">Web Dev</label>
           </div>
           <span>|</span>
           <div>
-            <input type="radio" className="selbut" id="aiml" />
+            <input type="radio" className="selbut" id="aiml" name="but" />
             <label htmlFor="aiml">AIML</label>
           </div>
           <span>|</span>
           <div>
-            <input type="radio" className="selbut" id="autom" />
+            <input type="radio" className="selbut" id="autom" name="but" />
             <label htmlFor="autom">Automation</label>
           </div>
           <span>|</span>
           <div>
-            <input type="radio" className="selbut" id="datasc" />
+            <input type="radio" className="selbut" id="datasc" name="but" />
             <label htmlFor="datasc">Data Science</label>
           </div>
         </div>
