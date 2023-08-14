@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   background: linear-gradient(0.5turn, #000107, 25%, #282828);
+  padding-top: 5vh;
   color: white;
   * {
     transition: all 0.3s ease;
@@ -21,10 +22,9 @@
     display: flex;
     max-width: 1170px;
     width: 90%;
-    margin: 10vh auto;
+    margin: 7.5vh auto;
     justify-content: space-between;
     overflow: hidden;
-    padding-bottom: 5vh;
     .about-me-para {
       display: flex;
       flex-direction: column;
