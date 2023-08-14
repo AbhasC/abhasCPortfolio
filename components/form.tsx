@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { useEasyGoogleForm } from "@hymns-of-web/use-easy-google-form";
 
 export default function MyCustomGForm() {
