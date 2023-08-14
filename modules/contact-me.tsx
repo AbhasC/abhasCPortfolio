@@ -2,7 +2,7 @@ import MyCustomGForm from "@/components/form";
 
 export default function ContactMe() {
   return (
-    <section className="contact-main" id="contactMe">
+    <section className="contact-main" id="contact-me">
       <h2 className="contact-name">Contact Me</h2>
       <div className="contact-container">
         <div className="contact-text">
