@@ -4,7 +4,7 @@ import { PiMouseSimple } from "react-icons/pi";
 
 export default function Landing() {
   return (
-    <section className="landing-main">
+    <section className="landing-main" id="landing">
       <div className="img-container">
         <Image
           src="/assets/images/landing-back.webp"

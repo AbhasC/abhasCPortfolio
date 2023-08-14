@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutMe() {
   return (
-    <section className="about-me-main">
+    <section className="about-me-main" id="about-me">
       <h2 className="about-me-head">A little about me</h2>
       <div className="about-me-text">
         <div className="about-me-para">

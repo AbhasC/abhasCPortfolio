@@ -8,7 +8,7 @@ const workLinks = [
     title: "AshuCrafts",
     decr: "A Live project made on NextJS, and uses a CMS and Nodemailer",
     type: "webdev",
-    status: "live",
+    status: true,
   },
   {
     link: "https://abhas-chatterjee.vercel.app/",
@@ -16,7 +16,7 @@ const workLinks = [
     title: "My Portfolio",
     decr: "This one right here. You're on it right now. Made on NextJS",
     type: "webdev",
-    status: "live",
+    status: true,
   },
   {
     link: "https://quantumshift.vercel.app/",
@@ -24,7 +24,7 @@ const workLinks = [
     title: "QuantumShift",
     decr: "A Live project made on NextJS and is under construction",
     type: "webdev",
-    status: "live",
+    status: true,
   },
   {
     link: "https://mr-coconetto.vercel.app/",
@@ -32,7 +32,15 @@ const workLinks = [
     title: "Mr. Coconetto",
     decr: "Worked as a collaborator in a team in this live project based on NextJS",
     type: "webdev",
-    status: "live",
+    status: true,
+  },
+  {
+    link: "https://et-tan.vercel.app/",
+    src: "/assets/images/work/expt.png",
+    title: "Expense Tracker",
+    decr: "An expense tracker, made both in vanilla HTML-CSS-JS and ReactJS",
+    type: "webdev",
+    status: true,
   },
   {
     link: "https://github.com/AbhasC/MovieSearchUsingAPICall",
@@ -40,15 +48,7 @@ const workLinks = [
     title: "Movie search",
     decr: "An movie search agent using API calls to fetch movie details",
     type: "webdev",
-    status: "no",
-  },
-  {
-    link: "https://github.com/AbhasC/ExpenseTracker",
-    src: "/assets/images/work/expt.png",
-    title: "Expense Tracker",
-    decr: "An expense tracker, made both in vanilla HTML-CSS-JS and ReactJS",
-    type: "webdev",
-    status: "no",
+    status: false,
   },
   {
     link: "https://github.com/AbhasC/Disease_Classification_in_R",
@@ -56,7 +56,7 @@ const workLinks = [
     title: "Disease Prediction using R",
     decr: "An AIML hackathon project made in collaboration with a friend",
     type: "aiml",
-    status: "no",
+    status: false,
   },
   {
     link: "https://github.com/BharathwajManoharan/ML_Hackathon23",
@@ -64,7 +64,7 @@ const workLinks = [
     title: "Air pollution classification using python",
     decr: "An AIML hackathon project made in collaboration with two friends",
     type: "aiml",
-    status: "no",
+    status: false,
   },
   {
     link: "https://github.com/AbhasC/ABInBev_GCC/tree/main/Case_2",
@@ -72,7 +72,7 @@ const workLinks = [
     title: "Notification automation",
     decr: "An automation project using selenium and nodemailer in python",
     type: "auto",
-    status: "no",
+    status: false,
   },
   {
     link: "https://github.com/AbhasC/WebScraping-Top-Grossing_Movies",
@@ -80,7 +80,7 @@ const workLinks = [
     title: "Movie earnings",
     decr: "A web scraper which extracts and ranks gross details of movies",
     type: "auto",
-    status: "no",
+    status: false,
   },
   {
     link: "https://github.com/AbhasC/ABInBev_GCC/tree/main/Case_1",
@@ -88,7 +88,7 @@ const workLinks = [
     title: "Production visualization",
     decr: "A data visualization where final and actual targets are compared",
     type: "data",
-    status: "no",
+    status: false,
   },
   {
     link: "https://github.com/AbhasC/-Data-Visualization-GOOGL-NASDAQ-Dataset-in-R",
@@ -96,7 +96,7 @@ const workLinks = [
     title: "Stock value visualization",
     decr: "A data visualization Google NASDAQ stock price increase over time",
     type: "data",
-    status: "no",
+    status: false,
   },
 ];
 
@@ -119,7 +119,7 @@ export default function Work() {
       title: string;
       decr: string;
       type: string;
-      status: string;
+      status: boolean;
     },
     index: number
   ) => {
@@ -136,6 +136,7 @@ export default function Work() {
         </div>
         <h3 className="work-title">{elem.title}</h3>
         <p className="work-description">{elem.decr}</p>
+        {elem.status ? <span className="live-status">LIVE</span> : null}
       </a>
     );
   };
@@ -146,7 +147,7 @@ export default function Work() {
   };
 
   return (
-    <section className="work-main">
+    <section className="work-main" id="work">
       <div className="work-header">
         <div className="header-text">
           <h2 className="header-text-heading">My Works</h2>

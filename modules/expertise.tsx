@@ -49,7 +49,7 @@ export default function Expertise() {
   };
 
   return (
-    <section className="expertise-main" id="expertises">
+    <section className="expertise-main" id="expertise">
       <h2 className="expertise-name">{`Areas I've dabbled in`}</h2>
       <div className="expertise-container">{expertiseDeets.map(mapper)}</div>
     </section>
