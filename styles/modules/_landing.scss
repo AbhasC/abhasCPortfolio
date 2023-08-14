@@ -7,8 +7,8 @@
   overflow: hidden;
   background-color: #000107;
   & > .img-container {
+    height: 85vh;
     position: absolute;
-    width: 850px;
     aspect-ratio: 1;
     top: 10vh;
     left: auto;
@@ -43,7 +43,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 110px;
+    height: 100px;
     width: 50px;
     margin-top: 15vh;
     z-index: 2;

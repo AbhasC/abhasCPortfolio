@@ -1,3 +1,5 @@
+import MyCustomGForm from "@/components/form";
+
 export default function ContactMe() {
   return (
     <section className="contact-main" id="contactMe">
@@ -7,11 +9,11 @@ export default function ContactMe() {
           <h3 className="contact-heading">Get in touch</h3>
           <p className="contact-subheading">
             Please feel free to contact me if any freelance opportunity arises.
-            I&apos;ll do my best to get back to you, whether you have a question
-            or just want to say hi.
+            I&apos;ll do my best to get back to you, whether if you have a
+            question or just want to say hi.
           </p>
         </div>
-        <form className="contact-form">
+        {/* <form className="contact-form">
           <input
             type="text"
             className="cm-form-ip cm-name"
@@ -28,6 +30,7 @@ export default function ContactMe() {
             placeholder="Your inquiry"
           ></input>
           <textarea
+            rows={30}
             cols={10}
             className="cm-form-ip cm-message"
             placeholder="Your message"
@@ -35,7 +38,8 @@ export default function ContactMe() {
           <button type="submit" className="cm-form-button">
             SUBMIT
           </button>
-        </form>
+        </form> */}
+        <MyCustomGForm />
       </div>
     </section>
   );

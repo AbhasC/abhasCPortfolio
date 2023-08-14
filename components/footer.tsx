@@ -1,6 +1,6 @@
 import { AiOutlineLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { IoMailOutline } from "react-icons/io5";
 
 export default function Footer() {
   return (
@@ -36,7 +36,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <HiOutlineMail />
+            <IoMailOutline />
           </a>
         </div>
         <div className="link-right -2">
