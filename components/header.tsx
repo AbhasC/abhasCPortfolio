@@ -17,7 +17,12 @@ export default function Header() {
     ind: number
   ) => {
     return (
-      <Link href={`#${val.tgt}`} key={ind} className="header-link">
+      <Link
+        href={`#${val.tgt}`}
+        key={ind}
+        className="header-link"
+        scroll={false}
+      >
         <span className="header-link-span-1">0{ind}</span>
         <span className="header-link-span-2">{`// ${val.name}`}</span>
       </Link>
