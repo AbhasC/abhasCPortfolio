@@ -60,9 +60,6 @@ export default function MyCustomGForm() {
         placeholder="Your message"
         required
       />
-      <input type="checkbox" name="abc" id="xyz" value="1" />
-      <input type="checkbox" name="abc" id="xyz" value="2" />
-      <input type="checkbox" name="abc" id="xyz" value="3" />
       <button type="submit" className="cm-form-button">
         SUBMIT
       </button>
