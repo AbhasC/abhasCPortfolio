@@ -29,6 +29,15 @@ export default function MyCustomGForm() {
       },
     ],
   });
+  // const formHandler = (e: any) => {
+  //   e.preventDefault();
+  //   alert("Your message has been sent");
+  //   if (ref) {
+  //     ref.current?.reset();
+  //     removeEventListener("submit", formHandler);
+  //   }
+  // };
+  // ref.current?.addEventListener("submit", formHandler);
   return (
     <form onSubmit={onSubmit} ref={ref} className="contact-form">
       <input

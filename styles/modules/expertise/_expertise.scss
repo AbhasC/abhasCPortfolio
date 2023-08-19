@@ -25,7 +25,7 @@
       padding: 15% 10% 12% 10%;
       margin: 3vh 0;
       border: 2px solid white;
-      &:nth-of-type(even) {
+      &:nth-of-type(2) {
         border-right: none;
         border-left: none;
       }
@@ -94,5 +94,9 @@
         font-weight: 300;
       }
     }
+    .titanic {
+      display: none;
+    }
   }
+  @import "./expertise-mobile";
 }

@@ -1,0 +1,23 @@
+@media only screen and (max-width: 800px) {
+  .contact-name {
+    justify-content: center;
+    text-align: center;
+  }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    .contact-text {
+      width: 100%;
+      text-align: center;
+    }
+    .contact-form {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .contact-container {
+    width: 90%;
+  }
+}
