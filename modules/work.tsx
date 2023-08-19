@@ -161,7 +161,7 @@ export default function Work() {
       </div>
       <div className="works-wrapper">
         <div className="works-filter">
-          <span className="filter-span">Filter By</span>
+          <span className="filter-span">Filter By :</span>
           <TempRadio
             value="all"
             text="all"
@@ -187,7 +187,6 @@ export default function Work() {
             text="Data Science"
             value="data"
             onChangeHandler={onChangeHandler}
-            lastOne
           />
         </div>
         <div className="works-container">{renderedList.map(mapper)}</div>
@@ -197,22 +196,20 @@ export default function Work() {
 }
 
 const TempRadio = ({
-  value,
+  value = "",
   text = "",
   defaultChecked = false,
   onChangeHandler = () => void 0,
-  lastOne = false,
 }: {
   value: string;
   text: string;
   defaultChecked?: boolean;
   onChangeHandler?: (e?: React.ChangeEvent<HTMLInputElement>) => void;
-  lastOne?: boolean;
 }) => {
   const ref = useRef<HTMLInputElement>(null);
   return (
     <>
-      <div>
+      <div className="work-label-container">
         <input
           type="radio"
           className="selbut"
@@ -225,7 +222,6 @@ const TempRadio = ({
         />
         <label htmlFor={value}>{text}</label>
       </div>
-      {lastOne ? null : <span>|</span>}
     </>
   );
 };

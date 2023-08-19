@@ -1,6 +1,8 @@
 .footer-main {
   display: flex;
   background-color: black;
+  justify-content: space-between;
+  align-items: center;
   .link-section-left {
     height: 150px;
     position: fixed;
@@ -96,9 +98,11 @@
     }
   }
   .footer-text {
+    display: flex;
     margin: 0 auto;
     color: white;
     font-size: 1.1rem;
-    padding: 1.5vh 0;
+    padding: 2.5vh 0;
   }
+  @import "./footer-mobile";
 }

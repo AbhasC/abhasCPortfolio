@@ -15,10 +15,10 @@
     z-index: 2;
     height: 55px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     font-size: 2.25rem;
     text-decoration: none;
-    font-family: "PT Sans Narrow";
+    font-family: "VT323";
     font-weight: 400;
     color: rgb(38, 174, 219);
     span {
@@ -63,4 +63,8 @@
       }
     }
   }
+  .header-burger-menu {
+    display: none;
+  }
+  @import "./header-mobile";
 }

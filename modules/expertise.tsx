@@ -15,7 +15,7 @@ export default function Expertise() {
     {
       logo: HiOutlineComputerDesktop,
       name: "Software Development",
-      decr: "Experienced in both functional and OOP: C, C++, Python, JavaScript, TypeScript.",
+      decr: "Experienced in both functional and OOP: C, C++, Python, JavaScript and TypeScript.",
     },
     {
       logo: TbBrandPython,
@@ -37,9 +37,7 @@ export default function Expertise() {
       <div className="exp-container" key={ind}>
         <div className="exp-head">
           <val.logo />
-          <span className="exp-name" style={{}}>
-            {val.name}
-          </span>
+          <span className="exp-name">{val.name}</span>
         </div>
         <span>{`<h3>`}</span>
         <p className="exp-decr">{val.decr}</p>
@@ -51,7 +49,13 @@ export default function Expertise() {
   return (
     <section className="expertise-main" id="expertise">
       <h2 className="expertise-name">{`Areas I've dabbled in`}</h2>
-      <div className="expertise-container">{expertiseDeets.map(mapper)}</div>
+      <div className="expertise-container">
+        {expertiseDeets.map(mapper)}
+        <p className="titanic">
+          Fun fact: The RMS Titanic came to rest 3800 metres below MSL after
+          sinking more than 111 years ago.
+        </p>
+      </div>
     </section>
   );
 }

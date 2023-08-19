@@ -38,30 +38,48 @@
       display: flex;
       width: 500px;
       justify-content: space-between;
-      &:hover {
-        label {
-          color: gray;
-        }
-      }
+      transition: all 0.3s ease;
       .filter-span {
         font-size: 1.1rem;
         margin-right: 10px;
       }
-      input {
-        display: none;
-        &:checked ~ label {
-          color: rgb(255, 90, 255);
+      &:hover {
+        .work-label-container {
+          label {
+            color: gray;
+          }
         }
       }
-      label {
-        font-size: 0.95rem;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-        text-transform: uppercase;
-        &:hover {
+      .work-label-container {
+        display: flex;
+        height: 18px;
+        margin: auto 0;
+        overflow: hidden;
+        align-items: center;
+        padding-bottom: 1px;
+        input {
+          display: none;
+          &:checked ~ label {
+            color: rgb(255, 90, 255);
+          }
+        }
+        label {
+          font-size: 0.95rem;
+          background: none;
+          border: none;
           color: white;
+          cursor: pointer;
+          text-transform: uppercase;
+          &:hover {
+            color: white;
+          }
+          border-right: 2px solid white;
+          padding-right: 7.5px;
+        }
+        &:nth-child(6) {
+          label {
+            border-right: none;
+          }
         }
       }
     }
@@ -115,4 +133,5 @@
       }
     }
   }
+  @import "./work-mobile";
 }

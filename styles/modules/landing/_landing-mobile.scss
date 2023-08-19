@@ -1,0 +1,47 @@
+@media only screen and (max-width: 1000px) {
+  .landing-name {
+    font-size: 5.1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  & > .img-container {
+    height: 70vh;
+    top: 17.5vh;
+  }
+  .landing-name {
+    transform: translateX(-8px);
+    padding-top: 32.5vh;
+  }
+  .landing-intro {
+    padding-bottom: 20vh;
+  }
+  .scroll-anim {
+    margin-top: 5vh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .landing-name {
+    font-size: 4rem;
+    padding-top: 35vh;
+  }
+  .landing-intro {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  & > .img-container {
+    height: 55vh;
+    top: 22.5vh;
+  }
+  .landing-name {
+    font-size: 3rem;
+    padding-top: 37.5vh;
+    padding-bottom: 5vh;
+  }
+  .landing-intro {
+    font-size: 1.25rem;
+  }
+  .scroll-anim {
+    display: none;
+  }
+}
