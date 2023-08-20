@@ -29,17 +29,16 @@ export default function MyCustomGForm() {
       },
     ],
   });
-  // const formHandler = (e: any) => {
-  //   e.preventDefault();
-  //   alert("Your message has been sent");
-  //   if (ref) {
-  //     ref.current?.reset();
-  //     removeEventListener("submit", formHandler);
-  //   }
-  // };
-  // ref.current?.addEventListener("submit", formHandler);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const formHandler = (e: any) => {
+    onSubmit(e);
+    alert("Your message has been sent");
+    if (ref) {
+      ref.current?.reset();
+    }
+  };
   return (
-    <form onSubmit={onSubmit} ref={ref} className="contact-form">
+    <form onSubmit={formHandler} ref={ref} className="contact-form">
       <input
         type="text"
         id="RfzOC"

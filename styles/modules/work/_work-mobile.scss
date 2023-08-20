@@ -18,6 +18,10 @@
     .header-text {
       .header-text-heading {
         font-size: 3.5rem;
+        width: 300px;
+      }
+      .header-text-subheading {
+        width: calc(100% - 300px);
       }
     }
   }
@@ -29,6 +33,9 @@
     text-align: center;
     .header-text {
       width: 100%;
+      .header-text-subheading {
+        margin-left: 20px;
+      }
     }
   }
   .works-wrapper {
@@ -48,6 +55,23 @@
           background-color: rgb(68, 25, 107);
           transform: scale(1.05);
         }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .work-header {
+    .header-text {
+      flex-direction: column;
+      .header-text-heading {
+        width: 100%;
+        padding-bottom: 3vh;
+      }
+      .header-text-subheading {
+        width: 100%;
+        border: none;
+        padding-left: 0;
+        margin-left: 0;
       }
     }
   }
