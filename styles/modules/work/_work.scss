@@ -14,17 +14,22 @@
     display: flex;
     margin: 5vh auto 7.5vh auto;
     .header-text {
-      width: 45%;
+      width: 100%;
       display: flex;
-      flex-direction: column;
+      column-gap: 10px;
+      align-items: center;
       .header-text-heading {
+        width: 380px;
         font-size: 4.5rem;
         font-weight: 500;
         font-family: "Pacifico";
       }
       .header-text-subheading {
+        width: calc(100% - 380px);
         font-size: 1.25rem;
         margin-top: 2vh;
+        padding-left: 30px;
+        border-left: 3px solid white;
       }
     }
   }

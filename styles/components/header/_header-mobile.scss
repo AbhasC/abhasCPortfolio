@@ -5,18 +5,36 @@
   * {
     transition: all 0.3s ease;
   }
+  .background-fuzzy {
+    &.active {
+      display: unset;
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      isolation: isolate;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(25px);
+    }
+    &.inactive {
+      display: none;
+    }
+  }
   .header-burger-menu {
     display: flex;
     position: relative;
     align-items: center;
     transform: translateY(5px);
     .burger {
-      z-index: 6;
+      z-index: 3;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       row-gap: 8px;
       width: 40px;
+      overflow: hidden;
       .line {
         width: 100%;
         &._1,
@@ -52,6 +70,16 @@
               }
               &._2 {
                 transform: rotate(0);
+              }
+            }
+          }
+          &._2 {
+            .line-segment {
+              &._1 {
+                border-radius: 3px 0 0 3px;
+              }
+              &._2 {
+                border-radius: 0 3px 3px 0;
               }
             }
           }
@@ -98,31 +126,34 @@
       }
     }
     .header-burger-menu-links {
+      z-index: 2;
       position: absolute;
       display: flex;
       flex-direction: column;
       height: 105vh;
-      width: 60vw;
+      width: 100vw;
       top: 0;
       right: 0;
-      justify-content: space-around;
       padding: 10vh 5vw;
-      backdrop-filter: blur(25px);
       background: linear-gradient(
         to right,
         transparent,
-        transparent 25%,
+        transparent 35%,
         rgb(255, 255, 255) 90%,
         rgb(255, 255, 255)
       );
       transition: all 0.5s ease;
       .header-link {
+        padding: 5vh 0;
+        height: 12.5vh;
+        width: fit-content;
         display: flex;
         flex-direction: column;
         padding-left: 2vw;
         align-items: flex-end;
         text-decoration: none;
         justify-content: flex-start;
+        align-self: flex-end;
         color: black;
         font-weight: 500;
         .header-link-span-1 {
@@ -134,35 +165,71 @@
         &:hover {
           color: white;
         }
+        &:nth-child(1) {
+          margin-top: 5vh;
+        }
       }
       &.inactive {
         transform: translateX(100vw) translateY(-4vh);
       }
       &.active {
         transform: translateX(5vw) translateY(-4vh);
-        background: blur(25px);
       }
     }
   }
 }
-@media only screen and (max-width: 800px) {
-  .header-burger-menu {
-    .header-burger-menu-links {
-      width: 70vw;
-    }
-  }
-}
-@media only screen and (max-width: 600px) {
-  .header-burger-menu {
-    .header-burger-menu-links {
-      width: 80vw;
-    }
-  }
-}
 @media only screen and (max-width: 400px) {
+  .header-my-name {
+    font-size: 1.75rem;
+  }
   .header-burger-menu {
-    .header-burger-menu-links {
-      width: 100vw;
+    .burger {
+      row-gap: 6px;
+      width: 30px;
+      &.active {
+        .line {
+          &._1 {
+            .line-segment {
+              &._1 {
+                transform: rotate(45deg) translateY(0.5px);
+              }
+              &._2 {
+                transform: rotate(-45deg) translateY(0.5px);
+              }
+            }
+          }
+          &._2 {
+            .line-segment {
+              &._1 {
+                transform: rotate(45deg) translateX(-1px) translateY(-3.45px)
+                  scaleX(300%);
+              }
+              &._2 {
+                transform: rotate(-45deg) translateX(1px) translateY(-3.5px)
+                  scaleX(300%);
+              }
+            }
+          }
+          &._3 {
+            .line-segment {
+              &._1 {
+                transform: rotate(-45deg) translateY(-1px) scaleX(2);
+              }
+              &._2 {
+                transform: rotate(45deg) translateY(-1px) scaleX(2);
+              }
+            }
+          }
+        }
+      }
     }
+  }
+}
+@media only screen and (max-height: 700px) {
+  .header-my-name {
+    height: 35px;
+  }
+  .header-burger-menu {
+    transform: translateY(1px);
   }
 }

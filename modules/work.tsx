@@ -157,7 +157,6 @@ export default function Work() {
             front-end development to automation.
           </p>
         </div>
-        <div className="work-anim-container"></div>
       </div>
       <div className="works-wrapper">
         <div className="works-filter">

@@ -46,6 +46,9 @@ export default function Header() {
 
   return (
     <header className="header-main">
+      <div
+        className={`background-fuzzy ${burgerState ? "active" : "inactive"}`}
+      ></div>
       <Link href="/" className="header-my-name">
         AbhasChatterjee
         <strong>:</strong>
