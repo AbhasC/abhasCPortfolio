@@ -1,6 +1,7 @@
 import { AiOutlineLinkedin, AiOutlineGithub } from "react-icons/ai";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
+import { RxDiscordLogo } from "react-icons/rx";
 
 export default function Footer() {
   return (
@@ -22,6 +23,15 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <AiOutlineLinkedin />
+          </a>
+        </div>
+        <div className="link-left -3">
+          <a
+            href="https://discord.com/users/718371137955823667"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <RxDiscordLogo />
           </a>
         </div>
       </div>
@@ -46,6 +56,15 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <FaWhatsapp />
+          </a>
+        </div>
+        <div className="link-right -3">
+          <a
+            href="https://www.instagram.com/abhasch/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
           </a>
         </div>
       </div>

@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   .link-section-left {
-    height: 150px;
+    height: 230px;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -18,7 +18,7 @@
       a {
         text-decoration: none;
         font-size: 2rem;
-        height: 60px;
+        height: 70px;
         display: flex;
         align-items: center;
         svg {
@@ -33,11 +33,11 @@
       &:nth-child(1):before {
         position: absolute;
         content: "";
-        height: 250px;
+        height: 335px;
         width: 4px;
         background: linear-gradient(grey 65%, transparent, transparent);
         left: 0;
-        top: 30px;
+        top: 34px;
       }
       &::after {
         position: absolute;
@@ -51,7 +51,7 @@
     }
   }
   .link-section-right {
-    height: 150px;
+    height: 230px;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -65,7 +65,7 @@
       a {
         text-decoration: none;
         font-size: 2rem;
-        height: 60px;
+        height: 70px;
         display: flex;
         align-items: center;
         svg {
@@ -80,11 +80,11 @@
       &:nth-child(1):before {
         position: absolute;
         content: "";
-        height: 250px;
+        height: 335px;
         width: 4px;
         background: linear-gradient(grey 65%, transparent, transparent);
         right: 0;
-        top: 30px;
+        top: 34px;
       }
       &::after {
         position: absolute;
@@ -102,7 +102,9 @@
     margin: 0 auto;
     color: white;
     font-size: 1.1rem;
-    padding: 2.5vh 0;
+    padding: 3.5vh 0;
+    align-items: center;
+    text-align: center;
   }
   @import "./footer-mobile";
 }
