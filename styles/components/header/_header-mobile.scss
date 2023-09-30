@@ -5,30 +5,13 @@
   * {
     transition: all 0.3s ease;
   }
-  .background-fuzzy {
-    &.active {
-      display: unset;
-      position: fixed;
-      height: 100vh;
-      width: 100vw;
-      top: 0;
-      left: 0;
-      isolation: isolate;
-      z-index: -1;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(25px);
-    }
-    &.inactive {
-      display: none;
-    }
-  }
   .header-burger-menu {
     display: flex;
     position: relative;
     align-items: center;
     transform: translateY(5px);
     .burger {
-      z-index: 3;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -125,56 +108,57 @@
         }
       }
     }
-    .header-burger-menu-links {
-      z-index: 2;
-      position: absolute;
+  }
+  .header-burger-menu-links {
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 105vh;
+    width: 100vw;
+    top: 0;
+    right: 4vw;
+    padding: 10vh 5vw;
+    transition: all 0.5s ease;
+    backdrop-filter: blur(25px);
+    background: linear-gradient(
+      to right,
+      transparent,
+      transparent 35%,
+      rgb(255, 255, 255) 90%,
+      rgb(255, 255, 255)
+    );
+    .header-link {
+      padding: 5vh 0;
+      height: 12.5vh;
+      width: fit-content;
       display: flex;
       flex-direction: column;
-      height: 105vh;
-      width: 100vw;
-      top: 0;
-      right: 0;
-      padding: 10vh 5vw;
-      background: linear-gradient(
-        to right,
-        transparent,
-        transparent 35%,
-        rgb(255, 255, 255) 90%,
-        rgb(255, 255, 255)
-      );
-      transition: all 0.5s ease;
-      .header-link {
-        padding: 5vh 0;
-        height: 12.5vh;
-        width: fit-content;
-        display: flex;
-        flex-direction: column;
-        padding-left: 2vw;
-        align-items: flex-end;
-        text-decoration: none;
-        justify-content: flex-start;
-        align-self: flex-end;
-        color: black;
-        font-weight: 500;
-        .header-link-span-1 {
-          font-size: 0.75rem;
-        }
-        .header-link-span-2 {
-          font-size: 1.25rem;
-        }
-        &:hover {
-          color: white;
-        }
-        &:nth-child(1) {
-          margin-top: 5vh;
-        }
+      padding-left: 2vw;
+      align-items: flex-end;
+      text-decoration: none;
+      justify-content: flex-start;
+      align-self: flex-end;
+      color: black;
+      font-weight: 500;
+      .header-link-span-1 {
+        font-size: 0.75rem;
       }
-      &.inactive {
-        transform: translateX(100vw) translateY(-4vh);
+      .header-link-span-2 {
+        font-size: 1.25rem;
       }
-      &.active {
-        transform: translateX(5vw) translateY(-4vh);
+      &:hover {
+        color: white;
       }
+      &:nth-child(1) {
+        margin-top: 5vh;
+      }
+    }
+    &.inactive {
+      transform: translateX(100vw) translateY(-4vh);
+    }
+    &.active {
+      transform: translateX(5vw) translateY(-4vh);
     }
   }
 }

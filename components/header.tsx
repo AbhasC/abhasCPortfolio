@@ -46,15 +46,12 @@ export default function Header() {
 
   return (
     <header className="header-main">
-      <div
-        className={`background-fuzzy ${burgerState ? "active" : "inactive"}`}
-      ></div>
       <Link href="/" className="header-my-name">
         AbhasChatterjee
         <strong>:</strong>
         <span>{`//`}</span>
       </Link>
-      <div className="header-link-container">{headerLinks.map(mapper)}</div>
+      <nav className="header-link-container">{headerLinks.map(mapper)}</nav>
       <div className="header-burger-menu" onClick={clickHandler}>
         <div className={`burger ${burgerState ? "active" : "inactive"}`}>
           <div className="line _1">
@@ -70,14 +67,14 @@ export default function Header() {
             <div className="line-segment _2"></div>
           </div>
         </div>
-        <div
-          className={`header-burger-menu-links ${
-            burgerState ? "active" : "inactive"
-          }`}
-        >
-          {headerLinks.map(mapper)}
-        </div>
       </div>
+      <nav
+        className={`header-burger-menu-links ${
+          burgerState ? "active" : "inactive"
+        }`}
+      >
+        {headerLinks.map(mapper)}
+      </nav>
     </header>
   );
 }

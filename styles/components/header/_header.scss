@@ -11,11 +11,8 @@
   * {
     transition: all 0.2s ease;
   }
-  .background-fuzzy {
-    display: none;
-  }
   .header-my-name {
-    z-index: 2;
+    z-index: 3;
     height: 55px;
     display: flex;
     align-items: center;
@@ -40,7 +37,7 @@
     }
   }
   .header-link-container {
-    z-index: 2;
+    z-index: 3;
     display: flex;
     &:hover {
       & > a {
@@ -67,6 +64,9 @@
     }
   }
   .header-burger-menu {
+    display: none;
+  }
+  .header-burger-menu-links {
     display: none;
   }
   @import "./header-mobile";

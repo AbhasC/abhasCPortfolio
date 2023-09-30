@@ -10,7 +10,7 @@ export default function Expertise() {
       name: "Frontend Dev, ReactJS, NextJS",
       decr: "Passionate about UI/UX. Have done freelance\
       projects based on HTML, CSS, JS/TS,\
-      ReactJS and NextJS frameworks.",
+      ReactJS library and NextJS framework.",
     },
     {
       logo: HiOutlineComputerDesktop,

@@ -1,10 +1,10 @@
 @media only screen and (max-width: 1250px) {
   & {
-    padding-top: 10vh;
+    padding-top: 12.5vh;
   }
   .expertise-container {
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
     .exp-container {
       margin: 0;
       &:nth-of-type(2) {
