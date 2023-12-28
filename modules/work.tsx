@@ -19,7 +19,7 @@ const workLinks = [
     status: true,
   },
   {
-    link: "https://quantumshift.vercel.app/",
+    link: "https://quantum-shift-qs.vercel.app/",
     src: "/assets/images/work/qshift.png",
     title: "QuantumShift",
     decr: "A Live project made on NextJS and is under construction",
